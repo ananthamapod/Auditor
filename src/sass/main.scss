@@ -1,7 +1,7 @@
 @import "./partials/reset";
 @import "~siimple/src/siimple";
 
-body {
+#app-inner {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -22,7 +22,7 @@ header {
     }
 }
 
-#app {
+main {
   flex-grow: 2;
   display: flex;
   flex-direction: column;

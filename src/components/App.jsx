@@ -8,15 +8,27 @@ class App extends Component {
     super(props)
 
   }
-
+  // hello
   render() {
     return (
-      <div className="main grid grid-fluid">
-        <div className="row">
-          <SearchPanel />
-          <ResultPanel />
-          <MapPanel />
-        </div>
+      <div id="app-inner">
+        <header>
+          <nav>
+            <ul className="mainNav">
+              <li>Home</li>
+              <li>Usage</li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <div className="main grid grid-fluid">
+            <div className="row">
+              <SearchPanel />
+              <ResultPanel />
+              <MapPanel />
+            </div>
+          </div>
+        </main>
       </div>
     )
   }
