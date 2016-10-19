@@ -1,5 +1,56 @@
+@import "./partials/reset";
 @import "~siimple/src/siimple";
 
-.app {
-  background: green;
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+header {
+  background: #f8f8ff;
+}
+
+.mainNav {
+    list-style-type: none;
+    > li {
+      display: inline;
+    }
+}
+
+#app {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  > .row {
+    flex-grow: 1;
+  }
+}
+
+.searchPanel {
+  background: #c3c3f3;
+}
+.resultPanel {
+  background: #eaf0f2;
+}
+.mapPanel {
+  background: #c3f3c3;
+}
+
+.searchPanel, .resultPanel, .mapPanel {
+  resize: horizontal;
+  width: 33.33%;
+  height: 100%;
+  &:focus {
+    border: 2px solid blue;
+  }
 }

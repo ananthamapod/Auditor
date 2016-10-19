@@ -1,5 +1,5 @@
 import "./sass/main.scss"
 
-import start from "./temp.jsx"
+import start from "./index.jsx"
 
 start()

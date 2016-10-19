@@ -6,10 +6,13 @@ var BUILD_DIR = path.resolve(__dirname, 'dist')
 var APP_DIR = path.resolve(__dirname, 'src')
 
 var config = {
-  entry: APP_DIR + '/index.js',
+  entry: [
+    'babel-polyfill',
+    APP_DIR + '/index.js'
+  ],
   output: {
     path: BUILD_DIR,
-    filename: 'index.js'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -40,7 +43,10 @@ var config = {
       template: APP_DIR + '/index.jade',
       title: 'Auditor - Proto 2',
       inject: 'body'
-    })
+    })/*,
+    new webpack.optimize.UglifyJsPlugin({
+      beautify : false
+    })*/
   ]
 }
 
