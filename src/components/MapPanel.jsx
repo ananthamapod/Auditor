@@ -17,6 +17,7 @@ class MapPanel extends Component {
     return (
       <div className="col-4 mapPanel">
         <Header />
+        <Map />
       </div>
     )
   }
