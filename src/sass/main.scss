@@ -1,5 +1,6 @@
 @import "./partials/reset";
 @import "~siimple/src/siimple";
+@import "./partials/forms";
 
 #app-inner {
   position: absolute;
@@ -8,7 +9,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
 }
 
 header {
@@ -53,4 +53,9 @@ main {
   &:focus {
     border: 2px solid blue;
   }
+}
+
+#map {
+  height: 500px;
+  width: 100%;
 }

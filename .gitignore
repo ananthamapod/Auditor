@@ -20,3 +20,9 @@ node_modules
 
 # Map files from webpack dev mode
 *.map
+
+# Production files
+dist/
+
+# Secret files
+secrets.*

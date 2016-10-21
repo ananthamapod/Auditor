@@ -1,0 +1,61 @@
+label {
+  display: block;
+  margin-bottom: 0.4em;
+}
+
+.form-radio {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+fieldset {
+  background: white;
+}
+
+label {
+  cursor: pointer;
+}
+
+.form-radio + span::before {
+  content: '';
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  vertical-align: -0.13em;
+  background: #f3c3c3;
+  border-radius: 1em;
+  border: 0.125em solid #eaf0f2;
+  box-shadow: 0 0 0 0.15em #f3c3c3;
+  margin-right: 0.75em;
+  transition: 0.7s ease all;
+}
+
+.form-radio:checked + span::before {
+  background: #f45660;
+  box-shadow: 0 0 0 0.25em #f3c3c3;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+}
+
+.form-radio:checked:focus + span::before {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0.25em #f3e3e3;
+  }
+  50% {
+    box-shadow: 0 0 0 0.25em #f3c3c3;
+  }
+  100% {
+    box-shadow: 0 0 0 0.25em #f3e3e3;
+  }
+}

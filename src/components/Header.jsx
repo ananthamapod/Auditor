@@ -1,8 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import Map from './Map.jsx'
-import Header from './Header.jsx'
+import React, { Component } from 'react'
 
-class MapPanel extends Component {
+class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {greeting : 'Hello', other : 'Goodbye'}
@@ -15,11 +13,14 @@ class MapPanel extends Component {
 
   render() {
     return (
-      <div className="col-4 mapPanel">
-        <Header />
+      <div className="row">
+        <h1 className="col-6">
+          {this.state.greeting}
+        </h1>
+        <span className="heart" onClick={this.toggle}/>
       </div>
     )
   }
 }
 
-export default MapPanel
+export default Header
