@@ -26,3 +26,6 @@ dist/
 
 # Secret files
 secrets.*
+
+# Feature test test projects
+testing/

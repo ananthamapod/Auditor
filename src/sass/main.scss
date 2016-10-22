@@ -41,6 +41,8 @@ main {
 }
 .resultPanel {
   background: #eaf0f2;
+  display: flex;
+  flex-direction: column;
 }
 .mapPanel {
   background: #c3f3c3;
@@ -52,6 +54,15 @@ main {
   height: 100%;
   &:focus {
     border: 2px solid blue;
+  }
+}
+
+.results {
+  flex-grow: 2;
+  overflow-y: auto;
+  display: flex;
+  > div {
+    flex-grow: 1;
   }
 }
 
