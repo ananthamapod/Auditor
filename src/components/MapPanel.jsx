@@ -10,7 +10,6 @@ class MapPanel extends Component {
   render() {
     return (
       <div className="col-4 mapPanel">
-        <Header />
         <Map />
       </div>
     )

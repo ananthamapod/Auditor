@@ -16,11 +16,11 @@ class Filter extends Component {
           <form onSubmit={this.filter}>
             <fieldset>
               <legend>Priority</legend>
-              <label htmlFor="radio-location">
+              <label className="radio-label" htmlFor="radio-location">
                 <input className="form-radio" id="radio-location" type="radio" name="priority" value="location" />
                 <span>Location</span>
               </label>
-              <label htmlFor="radio-time">
+              <label className="radio-label" htmlFor="radio-time">
                 <input className="form-radio" id="radio-time" type="radio" name="priority" value="time" />
                 <span>Time</span>
               </label>
