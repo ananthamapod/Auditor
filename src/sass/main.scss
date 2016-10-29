@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 @import "./partials/reset";
 @import "~siimple/src/siimple";
+$color_main: #6056f4;
+$color_highlight: #f5b157;
 @import "./partials/forms";
 
 #app-inner {
@@ -12,61 +15,133 @@
 }
 
 header {
-  background: #f8f8ff;
-}
-
-.mainNav {
-    list-style-type: none;
-    > li {
-      display: inline;
-    }
+  background: $color_main;
+  #app-title {
+    color: #f8f8ff;
+    font-weight: bold;
+    font-family: "Dancing Script", sans-serif;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .mainNav {
+      list-style-type: none;
+      > li {
+        display: inline;
+      }
+  }
 }
 
 main {
   flex-grow: 2;
   display: flex;
   flex-direction: column;
-}
-
-.main {
-  flex-grow: 1;
-  display: flex;
-  > .row {
+  .main {
     flex-grow: 1;
+    display: flex;
+    > .row {
+      flex-grow: 1;
+    }
   }
-}
-
-.searchPanel {
-  background: #c3c3f3;
-}
-.resultPanel {
-  background: #eaf0f2;
-  display: flex;
-  flex-direction: column;
-}
-.mapPanel {
-  background: #c3f3c3;
 }
 
 .searchPanel, .resultPanel, .mapPanel {
   resize: horizontal;
+  box-sizing: border-box;
   width: 33.33%;
   height: 100%;
-  &:focus {
-    border: 2px solid blue;
+  &:hover {
+    box-shadow: 1px 0px 0px 0px rgba(54,140,245,1);
   }
 }
 
-.results {
-  flex-grow: 2;
-  overflow-y: auto;
+.searchPanel {
+  background: #f8f8ff;
+}
+
+.resultPanel {
+  background: #e3e3f3;
   display: flex;
-  > div {
-    flex-grow: 1;
+  flex-direction: column;
+
+  h1 {
+  }
+
+  .results {
+    border-top: 1px solid #bba990;
+    background: #f8f8ff;
+    flex-grow: 2;
+    overflow-y: auto;
+    display: flex;
+    margin-top: 20px;
+    > div {
+      flex-grow: 1;
+      padding-left: 0;
+      padding-top: 0;
+      padding-right: 0;
+    }
+
+    .result {
+      display: flex;
+      border-bottom: 1px solid #bba990;
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover ~ .school {
+        background: $color_highlight;
+      }
+      .school {
+        flex-grow: 1;
+        background: #d6d4d3;
+        transition: 1s;
+        &:hover {
+          background: $color_highlight;
+        }
+        h3 {
+          color: #5a51de;
+          text-align: center;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-bottom: 0;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          transition: .3s;
+          &:hover {
+            color: #e8f8f8;
+          }
+        }
+      }
+      .classes {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        .row {
+          border-bottom: 1px solid #d1e1e8;
+          flex-grow: 1;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          transition: 1s;
+          &:last-child {
+            border-bottom: none;
+          }
+          &:hover {
+            background: lighten($color_highlight, 20%);
+          }
+        }
+      }
+    }
   }
 }
 
-#map {
-  height: 500px;
-  width: 100%;
+.mapPanel {
+  background: #e3e3f3;
+  display: flex;
+  padding: 0;
+  #map {
+    flex-grow: 1;
+    width: 100%;
+  }
 }

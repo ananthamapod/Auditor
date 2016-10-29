@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import Filter from './Filter.jsx'
 import School from './School.jsx'
 
 class ResultPanel extends Component {
@@ -111,6 +110,16 @@ class ResultPanel extends Component {
               courseNumber: "198:436"
             }
           ]
+        },
+        {
+          school: "Seton Hall University",
+          classes: [
+            {
+              title: "Embedded Systems",
+              time: "3:15 pm",
+              courseNumber: "198:436"
+            }
+          ]
         }
       ]
     }
@@ -122,8 +131,9 @@ class ResultPanel extends Component {
     )
     return (
       <div className="col-4 resultPanel">
-        <h1 className="col-6">Results</h1>
-        <Filter />
+        <div className="row">
+          <h1 className="col-12">Results</h1>
+        </div>
         <div className="row results">
           <div className="col-12">
             {rows}

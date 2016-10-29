@@ -11,11 +11,11 @@ class School extends Component {
     )
     console.log(classElements)
     return (
-      <div className="row">
-        <div className="col-4">
+      <div className="row result">
+        <div className="school col-4">
           <h3>{this.props.schoolName}</h3>
         </div>
-        <div className="col-8">
+        <div className="classes col-8">
           {classElements}
         </div>
       </div>

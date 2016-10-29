@@ -13,12 +13,7 @@ class App extends Component {
     return (
       <div id="app-inner">
         <header>
-          <nav>
-            <ul className="mainNav">
-              <li>Home</li>
-              <li>Usage</li>
-            </ul>
-          </nav>
+          <h1 id="app-title">Auditor</h1>
         </header>
         <main>
           <div className="main grid grid-fluid">

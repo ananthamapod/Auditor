@@ -1,6 +1,35 @@
 label {
-  display: block;
+  position: relative;
   margin-bottom: 0.4em;
+  cursor: pointer;
+  flex-grow: 1;
+
+  .label-text {
+    visibility: hidden;
+  }
+
+  .text-input-button {
+    position: absolute;
+    right: 1em;
+    top: -0.1em;
+    border-radius: 0.2em;
+    border: 1px solid #d1e1e8;
+    width: 1.5em;
+    height: 1.5em;
+    background: lighten(#d1e1e8, 10%);
+    &:hover {
+      background: #d1e1e8;
+      border-color: darken(#d1e1e8, 10%);
+    }
+  }
+}
+
+.form-input[type='submit'] {
+  background: $color_main;
+}
+
+.form-input[type='text']:focus {
+  border: 1px solid $color_main;
 }
 
 .form-radio {
@@ -15,11 +44,9 @@ label {
 }
 
 fieldset {
-  background: white;
-}
-
-label {
-  cursor: pointer;
+  border: none;
+  display: flex;
+  flex-direction: row;
 }
 
 .form-radio + span::before {
@@ -28,17 +55,17 @@ label {
   width: 0.8em;
   height: 0.8em;
   vertical-align: -0.13em;
-  background: #f3c3c3;
+  background: #c3c3f3;
   border-radius: 1em;
   border: 0.125em solid #eaf0f2;
-  box-shadow: 0 0 0 0.15em #f3c3c3;
+  box-shadow: 0 0 0 0.15em #c3c3f3;
   margin-right: 0.75em;
   transition: 0.7s ease all;
 }
 
 .form-radio:checked + span::before {
-  background: #f45660;
-  box-shadow: 0 0 0 0.25em #f3c3c3;
+  background: $color_main;
+  box-shadow: 0 0 0 0.25em #c3c3f3;
   width: 1em;
   height: 1em;
   vertical-align: -0.25em;
@@ -50,12 +77,12 @@ label {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0.25em #f3e3e3;
+    box-shadow: 0 0 0 0.15em #d3d3f3;
   }
   50% {
-    box-shadow: 0 0 0 0.25em #f3c3c3;
+    box-shadow: 0 0 0 0.25em lighten($color_main, 20%);
   }
   100% {
-    box-shadow: 0 0 0 0.25em #f3e3e3;
+    box-shadow: 0 0 0 0.15em #d3d3f3;
   }
 }
