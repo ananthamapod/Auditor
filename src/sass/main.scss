@@ -72,7 +72,7 @@ main {
     flex-grow: 2;
     overflow-y: auto;
     display: flex;
-    margin-top: 20px;
+    margin-top: 17px;
     > div {
       flex-grow: 1;
       padding-left: 0;
@@ -86,7 +86,7 @@ main {
       &:hover {
         cursor: pointer;
       }
-      &:hover ~ .school {
+      &:hover .school {
         background: $color_highlight;
       }
       .school {
@@ -115,15 +115,13 @@ main {
         flex-grow: 2;
         display: flex;
         flex-direction: column;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-right: 0;
+        padding: 0;
         .row {
           border-bottom: 1px solid #d1e1e8;
           flex-grow: 1;
-          padding-top: 1em;
-          padding-bottom: 1em;
+          padding: 1em;
           transition: 1s;
+          box-sizing: border-box;
           &:last-child {
             border-bottom: none;
           }

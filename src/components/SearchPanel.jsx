@@ -7,6 +7,10 @@ class SearchPanel extends Component {
     super(props)
   }
 
+  componentDidMount() {
+    let autocomplete = new google.maps.places.Autocomplete(document.getElementById('location-input'))
+  }
+
   render() {
     return (
       <div className="col-4 searchPanel">

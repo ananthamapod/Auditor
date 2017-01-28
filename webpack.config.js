@@ -40,7 +40,7 @@ var config = {
   },
   plugins : [
     new htmlWebpackPlugin({
-      template: APP_DIR + '/index.jade',
+      template: APP_DIR + '/index.pug',
       title: 'Auditor - Proto 2',
       inject: 'body'
     })/*,
