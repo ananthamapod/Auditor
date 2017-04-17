@@ -24,7 +24,7 @@ class SearchPanel extends Component {
   }
 
   handleChangeStop(location, time, index) {
-    let stops = this.state.stops
+    let stops = this.state.stops.slice()
     let stop = stops[index]
     stop.location = location
     stop.time = time
@@ -32,7 +32,7 @@ class SearchPanel extends Component {
   }
 
   addStop() {
-    let stops = this.state.stops
+    let stops = this.state.stops.slice()
     stops.push(new Stop())
     this.setState({stops: stops})
   }
