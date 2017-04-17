@@ -24,7 +24,9 @@ node_modules
 # Production files
 dist/
 
-# Secret files
+# Environment and secret files
+.env
+env/
 secrets.*
 
 # Feature test test projects

@@ -19,6 +19,7 @@ class Locator extends Component {
   render() {
     return (
       <span className="text-input-button" onClick={this.locate}>
+        <i className="glyphicon fa-fw fa-pulse fa-bullseye"/>
       </span>
     )
   }

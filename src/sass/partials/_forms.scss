@@ -21,10 +21,13 @@ label {
       background: #d1e1e8;
       border-color: darken(#d1e1e8, 10%);
     }
+    i {
+      margin: 0 0;
+    }
   }
 }
 
-.form-input[type='submit'] {
+.form-input[type='submit'], .form-input[type='button'] {
   background: $color_main;
 }
 
