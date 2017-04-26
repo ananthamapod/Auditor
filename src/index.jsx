@@ -1,17 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
-//import { createStore } from 'redux'
-//import { Provider } from 'react-redux'
+import auditorApp from './reducers'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import App from './components/App.jsx'
 
-// let store = createStore(auditorApp)
+let store = createStore(auditorApp)
 
 function start() {
   render(
     (
-      // <Provider store={store}>
+      <Provider store={store}>
         <App/>
-      // </Provider>
+      </Provider>
     )
     , document.getElementById('app'))
 }

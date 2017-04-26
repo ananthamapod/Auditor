@@ -19,7 +19,7 @@ class App extends Component {
           <div className="main grid grid-fluid">
             <div className="row">
               <SearchPanel />
-              <ResultPanel />
+              <ResultPanel results={[]} />
               <MapPanel />
             </div>
           </div>

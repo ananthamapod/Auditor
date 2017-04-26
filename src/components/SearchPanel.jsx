@@ -4,7 +4,7 @@ import Locator from './Locator.jsx'
 import ScheduleItem from './ScheduleItem.jsx'
 
 class Stop {
-  constructor(location, time) {
+  constructor(location = "", time = "") {
     this.location = location
     this.time = time;
   }
@@ -41,7 +41,7 @@ class SearchPanel extends Component {
     const stops = []
     for (let i = 0; i < this.state.stops.length; i++) {
       const stop = this.state.stops[i]
-      stops.push(<ScheduleItem key={i} onChangeStop={this.handleChangeStop}><Locator /></ScheduleItem>)
+      stops.push(<ScheduleItem key={i} index={i} location={stop.location} time={stop.time} onChangeStop={this.handleChangeStop}><Locator /></ScheduleItem>)
     }
     return (
       <div className="col-4 searchPanel">
