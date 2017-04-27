@@ -1,4 +1,4 @@
-import * from './actionTypes'
+import { GET_RESULTS, ADD_TO_SCHEDULE, REMOVE_FROM_SCHEDULE, MAP_RECENTER, ADD_STOP, CHANGE_STOP, DELETE_STOP } from './actionTypes'
 
 function getResults() {
   return {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import SearchPanel from './SearchPanel.jsx'
-import ResultPanel from './ResultPanel.jsx'
-import MapPanel from './MapPanel.jsx'
+import SearchPanelContainer from './container/SearchPanelContainer.jsx'
+import ResultPanelContainer from './container/ResultPanelContainer.jsx'
+import MapPanel from './presentational/MapPanel.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -18,8 +18,8 @@ class App extends Component {
         <main>
           <div className="main grid grid-fluid">
             <div className="row">
-              <SearchPanel />
-              <ResultPanel results={[]} />
+              <SearchPanelContainer />
+              <ResultPanelContainer />
               <MapPanel />
             </div>
           </div>

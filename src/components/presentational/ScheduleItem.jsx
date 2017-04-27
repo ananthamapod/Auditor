@@ -12,13 +12,11 @@ class ScheduleItem extends Component {
   }
 
   handleChangeLocation(e) {
-    this.setState({location: e.target.value})
-    this.props.onChangeStop(this.props.location, this.props.time, this.props.index)
+    this.props.onChangeStop(e.target.value, this.props.time, this.props.index)
   }
 
   handleChangeTime(e) {
-    this.setState({time: e.target.value})
-    this.props.onChangeStop(this.props.location, this.props.time, this.props.index)
+    this.props.onChangeStop(this.props.location, e.target.value, this.props.index)
   }
 
   componentDidMount() {

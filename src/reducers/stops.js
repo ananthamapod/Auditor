@@ -2,6 +2,7 @@ import { ADD_STOP, CHANGE_STOP, DELETE_STOP } from '../actions/actionTypes'
 
 class Stop {
   constructor(location, time) {
+    console.log(location)
     this.location = location
     this.time = time;
   }
