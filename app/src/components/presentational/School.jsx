@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react'
 import Class from './Class.jsx'
 
@@ -9,7 +10,6 @@ class School extends Component {
     let classElements = this.props.classes.map(
       (elem, ind) => <Class key={"class" + ind.toString()} classField={elem} />
     )
-    console.log(classElements)
     return (
       <div className="row result">
         <div className="school col-4">

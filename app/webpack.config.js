@@ -15,6 +15,10 @@ var config = {
     filename: 'bundle.js'
   },
   module: {
+    preLoaders: [
+      // Javascript
+      { test: /\.jsx?$/, loader: 'eslint', exclude: /node_modules/ }
+    ],
     loaders: [
       {
         test: /\.jsx?/,
@@ -37,6 +41,10 @@ var config = {
         loader: 'pug-loader'
       }
     ]
+  },
+  eslint: {
+    failOnWarning: false,
+    failOnError: true
   },
   plugins : [
     new htmlWebpackPlugin({

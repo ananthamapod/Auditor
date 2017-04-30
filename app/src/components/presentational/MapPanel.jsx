@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+// eslint-disable-next-line no-unused-vars
+import React, { Component } from 'react'
 import Map from './Map.jsx'
-import Header from './Header.jsx'
 
 class MapPanel extends Component {
   constructor(props) {

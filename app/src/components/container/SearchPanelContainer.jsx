@@ -16,6 +16,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     addStop: () => {
       dispatch(addStop("", ""))
+    },
+    deletestop: (index) => {
+      dispatch(deleteStop(index))
     }
   }
 }

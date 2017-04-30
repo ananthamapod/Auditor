@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+// eslint-disable-next-line no-unused-vars
+import React, { Component } from 'react'
 import Filter from './Filter.jsx'
 import LocatorContainer from '../container/LocatorContainer.jsx'
 import ScheduleItem from './ScheduleItem.jsx'

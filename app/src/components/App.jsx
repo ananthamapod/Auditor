@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react'
 import SearchPanelContainer from './container/SearchPanelContainer.jsx'
 import ResultPanelContainer from './container/ResultPanelContainer.jsx'

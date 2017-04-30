@@ -120,7 +120,7 @@ let default_state = [
 
 function results(state = default_state, action) {
   switch (action.type) {
-    case 'GET_RESULTS':
+    case GET_RESULTS:
       return state
     default:
       return state

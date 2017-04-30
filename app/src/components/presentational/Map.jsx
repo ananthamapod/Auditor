@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react'
 
 class Map extends Component {
@@ -11,14 +12,13 @@ class Map extends Component {
     let xhr = new XMLHttpRequest()
     xhr.addEventListener("load", function() {
       let data = JSON.parse(xhr.responseText)
-      console.log(data)
       lat = data.location.latitude
       lng = data.location.longitude
       window.map.setCenter({lat: lat, lng: lng})
     })
     xhr.open("GET", "http://geoip.nekudo.com/api/")
     xhr.send()
-    window.map = new google.maps.Map(document.getElementById('map'), {
+    window.map = new window.google.maps.Map(document.getElementById('map'), {
       center: {lat: lat, lng: lng},
       scrollwheel: false,
       zoom: 12

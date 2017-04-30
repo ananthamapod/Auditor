@@ -1,7 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Filter from './Filter.jsx'
-import Locator from './Locator.jsx'
 
 class ScheduleItem extends Component {
   constructor(props) {
@@ -20,7 +19,8 @@ class ScheduleItem extends Component {
   }
 
   componentDidMount() {
-    let autocomplete = new google.maps.places.Autocomplete(document.getElementById('location-input' + this.props.index))
+    // TODO: find a way to store these autocomplete objects for later reference
+    new window.google.maps.places.Autocomplete(document.getElementById('location-input' + this.props.index))
   }
 
   render() {
