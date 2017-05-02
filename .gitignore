@@ -26,7 +26,6 @@ dist/
 
 # Environment and secret files
 .env
-env/
 secrets.*
 
 # Feature test test projects
