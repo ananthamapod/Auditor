@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react'
+import requests from 'superagent'
 
 class Map extends Component {
   constructor(props) {
@@ -9,15 +10,16 @@ class Map extends Component {
   componentDidMount() {
     let lat = 0
     let lng = 0
-    let xhr = new XMLHttpRequest()
-    xhr.addEventListener("load", function() {
-      let data = JSON.parse(xhr.responseText)
-      lat = data.location.latitude
-      lng = data.location.longitude
-      window.map.setCenter({lat: lat, lng: lng})
+    requests.get("http://geoip.nekudo.com/api/").end(function(err, res) {
+      // eslint-disable-next-line no-console
+      if (err) console.log(err)
+      else {
+        let data = JSON.parse(res.text)
+        lat = data.location.latitude
+        lng = data.location.longitude
+        window.map.panTo({lat: lat, lng: lng})
+      }
     })
-    xhr.open("GET", "http://geoip.nekudo.com/api/")
-    xhr.send()
     window.map = new window.google.maps.Map(document.getElementById('map'), {
       center: {lat: lat, lng: lng},
       scrollwheel: false,

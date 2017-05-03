@@ -9,7 +9,7 @@ const locate = (e, dispatch) => {
     window.navigator.geolocation.getCurrentPosition(function(position) {
       let lat = position.coords.latitude
       let lng = position.coords.longitude
-      window.map.setCenter({lat: lat, lng: lng})
+      window.map.panTo({lat: lat, lng: lng})
       dispatch(mapRecenter({lat: lat, lng: lng}))
     })
   }
