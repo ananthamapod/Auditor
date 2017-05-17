@@ -3,6 +3,8 @@
 
 Just throw in a full list of where you are at what times during the day, and you can find classes that are open to the public along your route.
 
+![Screenshot](https://cloud.githubusercontent.com/assets/5254722/26138956/17c7f9cc-3a9b-11e7-82f5-be57b7465fa6.png)
+
 ## Setup
 First you need to install the docker-related tools if you don't have them already.
 
