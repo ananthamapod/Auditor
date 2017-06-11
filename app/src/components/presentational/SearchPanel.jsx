@@ -27,11 +27,11 @@ class SearchPanel extends Component {
           <div className="col-12">
             <label htmlFor="subject-input">
               <div className="label-text">Subject</div>
-              <input id="subject-input" className="form-input" type="text" placeholder="Subject" />
+              <input id="subject-input" className="form-input" type="text" placeholder="Subject" onChange={this.props.changeSubject} />
             </label>
           </div>
           <div className="col-12">
-            <input className="form-input" type="submit" value="Search" />
+            <input className="form-input" type="submit" value="Search" onClick={this.props.search}/>
           </div>
         </form>
         <Filter />

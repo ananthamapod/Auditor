@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { changeStop, addStop, deleteStop } from '../../actions/actionCreators'
+import { changeStop, addStop, deleteStop, changeSubject, search } from '../../actions/actionCreators'
 import SearchPanel from '../presentational/SearchPanel.jsx'
 
 
@@ -19,6 +19,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     deletestop: (index) => {
       dispatch(deleteStop(index))
+    },
+    changeSubject: (event) => {
+      dispatch(changeSubject(event.target.value))
+    },
+    search: () => {
+      dispatch(search())
     }
   }
 }

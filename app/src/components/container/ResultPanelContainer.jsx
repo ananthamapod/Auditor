@@ -4,9 +4,7 @@ import ResultPanel from '../presentational/ResultPanel.jsx'
 
 
 const mapStateToProps = (state) => {
-  return {
-    results: state.results
-  }
+  return state.search
 }
 
 const mapDispatchToProps = (dispatch) => {

@@ -1,4 +1,4 @@
-import { GET_RESULTS, ADD_TO_SCHEDULE, REMOVE_FROM_SCHEDULE, MAP_RECENTER, ADD_STOP, CHANGE_STOP, DELETE_STOP } from './actionTypes'
+import { GET_RESULTS, ADD_TO_SCHEDULE, REMOVE_FROM_SCHEDULE, MAP_RECENTER, ADD_STOP, CHANGE_STOP, DELETE_STOP, CHANGE_SUBJECT, SEARCH, RECEIVE_RESULTS } from './actionTypes'
 
 function getResults() {
   return {
@@ -52,4 +52,25 @@ function deleteStop(index) {
   }
 }
 
-export { getResults, mapRecenter, addToSchedule, removeFromSchedule, addStop, changeStop, deleteStop }
+function changeSubject(subject) {
+  return {
+    type: CHANGE_SUBJECT,
+    subject
+  }
+}
+
+function search() {
+  return {
+    type: SEARCH
+  }
+}
+
+function receiveResults(json) {
+  return {
+    type: RECEIVE_RESULTS,
+    results: json.data.results.map(child => child.data),
+    receivedAt: Date.now()
+  }
+}
+
+export { getResults, mapRecenter, addToSchedule, removeFromSchedule, addStop, changeStop, deleteStop, changeSubject, search, receiveResults }
